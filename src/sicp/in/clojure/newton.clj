@@ -1,4 +1,4 @@
-(ns sicp.in.clojure
+(ns sicp.in.clojure.newton
   (:gen-class))
 
 (defn -main

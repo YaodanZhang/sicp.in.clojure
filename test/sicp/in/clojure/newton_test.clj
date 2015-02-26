@@ -1,6 +1,6 @@
-(ns sicp.in.clojure-test
+(ns sicp.in.clojure.newton-test
   (:require [clojure.test :refer :all]
-            [sicp.in.clojure :refer :all]))
+            [sicp.in.clojure.newton :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
