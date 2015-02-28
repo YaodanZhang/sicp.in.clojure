@@ -14,20 +14,21 @@
   [x]
   (* x x))
 
-(defn improve
-  [input, guess]
-  (average (/ input guess) guess))
-
-(defn good-enough
-  [input, guess]
-  (if (> (abs (- input (square guess))) 0.000000001)
-    false true))
-
-(defn sqrt-with-guess
-  [input, guess]
-  (if (good-enough input guess)
-    guess (sqrt-with-guess input (improve input guess))))
-
 (defn sqrt
   [input]
+
+  (defn improve
+    [input, guess]
+    (average (/ input guess) guess))
+
+  (defn good-enough
+    [input, guess]
+    (if (> (abs (- input (square guess))) 0.000000001)
+      false true))
+
+  (defn sqrt-with-guess
+    [input, guess]
+    (if (good-enough input guess)
+      guess (sqrt-with-guess input (improve input guess))))
+
   (sqrt-with-guess input 1))
