@@ -8,18 +8,17 @@
 (defn abs
   [x]
   (if (< x 0)
-    (- 0 x)
-    x))
+    (- 0 x) x))
 
 (defn good-enough
   [x, y]
-  (if (> (abs (- x y)) 0.00001M)
-    false
-    true))
+  (if (> (abs (- x y)) 0.000000001)
+    false true))
 
 (defn sqrt-with-guess
   [input, guess]
-  ())
+  (if (good-enough (improve input guess) guess)
+    guess (sqrt-with-guess input (improve input guess))))
 
 (defn sqrt
   [input]
