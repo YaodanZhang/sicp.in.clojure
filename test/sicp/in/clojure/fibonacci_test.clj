@@ -34,4 +34,4 @@
   (testing "test fibonacci iter 10"
     (is (= (fib-iter 10) 89)))
   (testing "test fibonacci iter 100"
-    (is (= (fib-iter 50) 20365011074q))))
+    (is (= (fib-iter 50) 20365011074))))
