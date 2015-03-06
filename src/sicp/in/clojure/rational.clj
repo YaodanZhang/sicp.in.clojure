@@ -1,9 +1,11 @@
 (ns sicp.in.clojure.rational
-  (:gen-class))
+  (:gen-class)
+  (:require [sicp.in.clojure.gcd :refer :all]
+            [sicp.in.clojure.newton :refer [abs]]))
 
 (defn make-rat
   [n, d]
-  (cons n [d]))
+  (list n d))
 
 (defn numer
   [r]
