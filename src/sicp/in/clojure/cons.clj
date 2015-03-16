@@ -3,28 +3,28 @@
 
 (defn cons1
   [a, b]
-  (fn [f] (f a b)))
-
-(defn car1
-  [c]
-  (c (fn [a, b] a)))
-
-(defn cdr1
-  [c]
-  (c (fn [a, b] b)))
-
-(defn cons2
-  [a, b]
   (fn [m]
     (if (= m 0) a b)))
 
-(defn car2
+(defn car1
   [c]
   (c 0))
 
-(defn cdr2
+(defn cdr1
   [c]
   (c 1))
+
+(defn cons2
+  [a, b]
+  (fn [f] (f a b)))
+
+(defn car2
+  [c]
+  (c (fn [a, b] a)))
+
+(defn cdr2
+  [c]
+  (c (fn [a, b] b)))
 
 (defn cons3
   [a, b]
