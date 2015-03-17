@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/YaodanZhang/sicp.in.clojure.svg?branch=master)](https://travis-ci.org/YaodanZhang/sicp.in.clojure)
 # sicp.in.clojure
 
 FIXME: description
