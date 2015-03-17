@@ -38,7 +38,7 @@
 
   (* (sqr 2 a) (sqr 3 b)))
 
-(defn count-of-a
+(defn factor-of-a
   [x, a]
 
   (defn iter
@@ -49,8 +49,8 @@
 
 (defn car3
   [c]
-  (count-of-a c 2))
+  (factor-of-a c 2))
 
 (defn cdr3
   [c]
-  (count-of-a c 3))
+  (factor-of-a c 3))
