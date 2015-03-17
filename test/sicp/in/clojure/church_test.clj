@@ -10,5 +10,5 @@
     (is (= (show-church church-10) 10)))
   (testing "test operation"
     (is (= (show-church (church-add-1 church-10)) 11))
-    (is (= (show-church (church-add church-2 church-10)) 12))))
+    (is (= (show-church (church-add church-2 church-10)) 11))))
 
