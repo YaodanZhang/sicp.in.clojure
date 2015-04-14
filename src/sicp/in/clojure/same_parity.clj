@@ -24,6 +24,8 @@
 
   (defn same-by
     [func]
-    (fn [a] (fn [b] (= (func a) (func b)))))
+    (fn [x]
+      (fn [y]
+        (= (func x) (func y)))))
 
   (cons a (filter ((same-by mod-2) a) coll)))
