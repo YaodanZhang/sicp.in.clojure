@@ -22,3 +22,10 @@
     (is (= (my-reverse-classic ()) ()))
     (is (= (my-reverse-classic '(1)) '(1)))
     (is (= (my-reverse-classic '(1 2)) '(2 1)))))
+
+(deftest my-last-test
+  (testing "get last items from a list"
+    (is (= (my-last nil) nil))
+    (is (= (my-last ()) nil))
+    (is (= (my-last '(1)) 1))
+    (is (= (my-last '(1 2)) 2))))

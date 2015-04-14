@@ -17,8 +17,14 @@
   [items]
   (if (empty? items)
     items
-    (append (my-reverse (rest items)) (cons (first items) '()))))
+    (append (my-reverse (rest items)) (list (first items)))))
 
 (defn my-reverse-classic
   [items]
   (reduce conj '() items))
+
+(defn my-last
+  [items]
+  (if (empty? (rest items))
+    (first items)
+    (my-last (rest items))))
